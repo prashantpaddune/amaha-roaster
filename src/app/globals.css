@@ -71,7 +71,7 @@
     --secondary:         #454545;
     --secondary-foreground:#FBFBFB;
     --muted:             #60646C;
-    --muted-foreground:  #A1A1AA;
+    --muted-foreground:  #757575;
     --accent:            #8FBBE8;
     --accent-foreground: #FBFBFB;
     --destructive:       #DC2626;
@@ -90,13 +90,13 @@
     --navbar-ring:       #8E8E8E;
 
     /* ─────────── Slot state bases ─────────── */
-    --slot-online:           #A3E635;
-    --slot-offline:          #F97316;
-    --slot-both:             #60A5FA;
+    --slot-online:           #97CC55;
+    --slot-offline:          #E76943;
+    --slot-both:             #5AA9E8;
     --slot-available:        #E5E7EB;
-    --slot-booked-online:    #1E40AF;
-    --slot-booked-offline:   #92400E;
-    --slot-blocked:          #EF4444;
+    --slot-booked-online:    #355E80;
+    --slot-booked-offline:   #80490B;
+    --slot-blocked:          #C73031;
 
     /* ─────────── Event bases ─────────── */
     --event-purple:          #9333EA;

@@ -2,7 +2,7 @@
 
 import Filters from './roster-filters';
 import { Provider } from '@/components/roster/types';
-import RosterListView from "@/components/roster/roster-list-view";
+import RosterListView from "@/components/roster/roster-list-view/roster-list-view";
 import RosterCalenderView from "@/components/roster/roster-calender-view";
 import useGetProvidersFilters from "@/hooks/use-get-providers-filters";
 import { useAppSelector } from "@/store/hooks";
