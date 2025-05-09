@@ -17,3 +17,26 @@ export const VIEW_OPTIONS: ToggleOption<View>[] = [
         ariaLabel: "Calendar view",
     },
 ] as const;
+
+export const FILTER_OPTIONS = {
+    services: [
+        'therapist',
+        'psychiatrist',
+        'cardiologist',
+        'physiotherapist',
+        'dietician',
+        'neurologist'
+    ],
+    types: ['inhouse', 'external'],
+    centres: [
+        'Bandra Clinic',
+        'Andheri Clinic',
+        'Juhu Clinic',
+        'Churchgate Clinic',
+        'Powai Center',
+        'Borivali Center',
+        'Marine Lines Clinic',
+        'Versova Clinic',
+        'Malad Clinic'
+    ],
+} as const;

@@ -5,6 +5,7 @@
     --color-background:               var(--background);
     --color-black:                    var(--black);
     --color-grey:                     var(--grey);
+    --color-davy-grey:                var(--davy-grey);
     --color-white:                    var(--white);
     --color-foreground:               var(--foreground);
 
@@ -50,6 +51,10 @@
     --color-event-gold:               var(--event-gold);
     --color-event-blue:               var(--event-blue);
     --color-event-brown:              var(--event-brown);
+
+    /* ─────────── Calendar events ─────────── */
+    --color-button-primary:           var(--button-primary);
+--color-button-secondary:             var(--button-secondary);
 }
 
 :root {
@@ -58,6 +63,7 @@
     --background:        #131315;
     --black:             #000000;
     --grey:              #4C4C4C;
+    --davy-grey:         #9E9E9E;
     --white:             #FFFFFF;
     --foreground:        #FBFBFB;
     --primary:           #EBEBEB;
@@ -99,6 +105,10 @@
     --event-gold:            #CA8A04;
     --event-blue:            #2563EB;
     --event-brown:           #A16207;
+
+    /* ─────────── Button bases ─────────── */
+    --button-primary:          #E76943;
+    --button-secondary:        #FFF5F2;
 }
 
 @layer base {

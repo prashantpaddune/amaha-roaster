@@ -1,4 +1,6 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit';
+import filterReducer from './slices/filter-slice';
+import providerReducer from './slices/provider-slice';
 import viewReducer from './slices/view-slice';
 import {
     persistStore,
@@ -12,22 +14,24 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
+const rootReducer = combineReducers({
+    view: viewReducer,
+    filters: filterReducer,
+    providers: providerReducer,
+});
+
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['view'],
+    whitelist: ['view']
 };
-
-const rootReducer = combineReducers({
-    view: viewReducer,
-});
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 export const store = configureStore({
     reducer: persistedReducer,
-    middleware: (getDefaultMiddleware) =>
-        getDefaultMiddleware({
+    middleware: (getDefault) =>
+        getDefault({
             serializableCheck: {
                 ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
             },
@@ -35,6 +39,5 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore(store);
-
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;
