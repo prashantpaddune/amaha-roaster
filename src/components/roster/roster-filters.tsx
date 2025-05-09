@@ -7,12 +7,12 @@ import {
     setType,
     setCentre,
 } from '@/store/slices/filter-slice';
-import { CENTER_OPTIONS, SERVICE_OPTIONS, TYPE_OPTIONS } from '@/components/constants';
+import { CENTER_OPTIONS, SERVICE_OPTIONS, TYPE_OPTIONS } from '@/components/roster/constants';
 import { Select } from "@/ui/select";
 import { Button } from "@/ui/button";
 import { Input } from "@/ui/input";
 import { SearchIcon } from "@/icons/search";
-import { FilterType } from "@/components/types";
+import { FilterType } from "@/components/roster/types";
 
 type Props = {
     onSearchChange: (value: string) => void;
@@ -22,7 +22,7 @@ type Props = {
     showResetBtn: boolean;
 }
 
-const RoasterFilters = ({ filters, onSearchChange, applyFilters, onReset, showResetBtn }: Props) => {
+const RosterFilters = ({ filters, onSearchChange, applyFilters, onReset, showResetBtn }: Props) => {
     const dispatch = useAppDispatch();
     const { service, type, centre, search } = filters;
     const isApplyBtnDisabled = Boolean(service || type || centre);
@@ -74,4 +74,4 @@ const RoasterFilters = ({ filters, onSearchChange, applyFilters, onReset, showRe
     );
 };
 
-export default RoasterFilters;
+export default RosterFilters;

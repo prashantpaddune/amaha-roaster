@@ -1,7 +1,6 @@
 import { useAppSelector } from "@/store/hooks";
 
-
-const RoasterListView = () => {
+const RosterCalenderView = () => {
     const { list, loading, error } = useAppSelector((s) => s.providers);
 
     if (loading) return <div className="p-6">Loading…</div>;
@@ -10,7 +9,7 @@ const RoasterListView = () => {
 
     return (
         <div className="space-y-4">
-            <h2 className="text-xl font-semibold">Roaster List View</h2>
+            <h2 className="text-xl font-semibold">Roster Calendar View</h2>
             <pre className="overflow-auto max-h-[60vh] p-4 bg-gray-50 rounded-md text-sm whitespace-pre-wrap break-words">
                 {JSON.stringify(list, null, 2)}
             </pre>
@@ -18,4 +17,4 @@ const RoasterListView = () => {
     )
 }
 
-export default RoasterListView;
+export default RosterCalenderView

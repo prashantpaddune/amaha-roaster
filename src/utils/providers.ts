@@ -1,4 +1,4 @@
-import {FilterType, Provider} from "@/components/types";
+import { FilterType, Provider } from "@/components/roster/types";
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'http://localhost:3000';
 

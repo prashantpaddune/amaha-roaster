@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
-import { Provider } from '@/components/types';
+import { Provider } from '@/components/roster/types';
 
 interface ProviderState {
     list: Provider[];

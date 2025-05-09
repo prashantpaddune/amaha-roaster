@@ -2,11 +2,11 @@
 
 import { ChevronsRightIcon } from '@/icons/chevrons-right';
 import { ToggleButtonGroup } from '@/ui/toggle-group';
-import { VIEW_OPTIONS } from '@/components/constants';
+import { VIEW_OPTIONS } from '@/components/roster/constants';
 import { useAppSelector, useAppDispatch } from '@/store/hooks';
 import { setView } from '@/store/slices/view-slice';
 
-const Header = () => {
+const RosterNavbar = () => {
     const view = useAppSelector((state) => state.view.view);
     const dispatch = useAppDispatch();
 
@@ -26,4 +26,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default RosterNavbar;

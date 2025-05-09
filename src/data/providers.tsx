@@ -1,4 +1,4 @@
-import { Provider } from "@/components/types";
+import { Provider } from "@/components/roster/types";
 
 export const PROVIDERS_DATA: Provider[] = [
     {

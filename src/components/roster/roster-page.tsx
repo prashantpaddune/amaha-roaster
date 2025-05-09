@@ -1,9 +1,9 @@
 'use client';
 
-import Filters from './roaster-filters';
-import { Provider } from '@/components/types';
-import RoasterListView from "@/components/roaster-list-view";
-import RoasterCalenderView from "@/components/roaster-calender-view";
+import Filters from './roster-filters';
+import { Provider } from '@/components/roster/types';
+import RosterListView from "@/components/roster/roster-list-view";
+import RosterCalenderView from "@/components/roster/roster-calender-view";
 import useGetProvidersFilters from "@/hooks/use-get-providers-filters";
 import { useAppSelector } from "@/store/hooks";
 
@@ -11,7 +11,7 @@ type Props = {
     initialProviders: Provider[];
 }
 
-export default function RoasterPage({ initialProviders }: Props) {
+export default function RosterPage({ initialProviders }: Props) {
     const view = useAppSelector((s) => s.view.view);
     const {
         onSearchChange,
@@ -31,8 +31,8 @@ export default function RoasterPage({ initialProviders }: Props) {
                 showResetBtn={showResetBtn}
             />
             <main className="flex-1 p-4">
-                {view === 'list' && <RoasterListView/>}
-                {view === 'calendar' && <RoasterCalenderView/>}
+                {view === 'list' && <RosterListView />}
+                {view === 'calendar' && <RosterCalenderView />}
             </main>
         </div>
     );

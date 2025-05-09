@@ -1,5 +1,5 @@
 import { ToggleOption } from "@/ui/toggle-group";
-import { View } from "@/components/types";
+import { View } from "@/components/roster/types";
 import { ListIcon } from "@/icons/list";
 import { CalenderIcon } from "@/icons/calender";
 

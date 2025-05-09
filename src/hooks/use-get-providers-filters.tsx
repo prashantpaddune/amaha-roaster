@@ -3,7 +3,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect } from "react";
 import { fetchProviders, setProviders } from "@/store/slices/provider-slice";
 import { applyUrlFilters, serializeFilters } from "@/utils/filters";
-import { Provider } from "@/components/types";
+import { Provider } from "@/components/roster/types";
 import { resetFilters, setSearch } from "@/store/slices/filter-slice";
 
 type Props = {

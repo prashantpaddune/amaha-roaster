@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { View } from "@/components/types";
+import { View } from "@/components/roster/types";
 
 type ViewState = {
     view: View;
