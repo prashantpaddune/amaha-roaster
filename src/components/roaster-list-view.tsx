@@ -9,11 +9,12 @@ const RoasterListView = () => {
     if (list.length === 0) return <div className="p-6">No providers found.</div>;
 
     return (
-        <>
-            <h2>Roaster List</h2>
-            {JSON.stringify(list)}
-        </>
-
+        <div className="space-y-4">
+            <h2 className="text-xl font-semibold">Roaster List View</h2>
+            <pre className="overflow-auto max-h-[60vh] p-4 bg-gray-50 rounded-md text-sm whitespace-pre-wrap break-words">
+                {JSON.stringify(list, null, 2)}
+            </pre>
+        </div>
     )
 }
 

@@ -18,25 +18,31 @@ export const VIEW_OPTIONS: ToggleOption<View>[] = [
     },
 ] as const;
 
-export const FILTER_OPTIONS = {
-    services: [
-        'therapist',
-        'psychiatrist',
-        'cardiologist',
-        'physiotherapist',
-        'dietician',
-        'neurologist'
-    ],
-    types: ['inhouse', 'external'],
-    centres: [
-        'Bandra Clinic',
-        'Andheri Clinic',
-        'Juhu Clinic',
-        'Churchgate Clinic',
-        'Powai Center',
-        'Borivali Center',
-        'Marine Lines Clinic',
-        'Versova Clinic',
-        'Malad Clinic'
-    ],
-} as const;
+export const SERVICE_OPTIONS = [
+    { label: 'All services',   value: '' },
+    { label: 'Therapist',      value: 'therapist' },
+    { label: 'Psychiatrist',   value: 'psychiatrist' },
+    { label: 'Cardiologist',   value: 'cardiologist' },
+    { label: 'Physiotherapist', value: 'physiotherapist' },
+    { label: 'Dietician',      value: 'dietician' },
+    { label: 'Neurologist',    value: 'neurologist' },
+];
+
+export const TYPE_OPTIONS = [
+    { label: 'All types',  value: '' },
+    { label: 'In-house',   value: 'inhouse' },
+    { label: 'External',    value: 'external' },
+];
+
+export const CENTER_OPTIONS = [
+    { label: 'All centres',       value: '' },
+    { label: 'Bandra Clinic',     value: 'Bandra Clinic' },
+    { label: 'Andheri Clinic',    value: 'Andheri Clinic' },
+    { label: 'Juhu Clinic',       value: 'Juhu Clinic' },
+    { label: 'Churchgate Clinic', value: 'Churchgate Clinic' },
+    { label: 'Powai Center',      value: 'Powai Center' },
+    { label: 'Borivali Center',   value: 'Borivali Center' },
+    { label: 'Marine Lines Clinic', value: 'Marine Lines Clinic' },
+    { label: 'Versova Clinic',    value: 'Versova Clinic' },
+    { label: 'Malad Clinic',      value: 'Malad Clinic' },
+];

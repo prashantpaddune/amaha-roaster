@@ -3,8 +3,7 @@
 import React from 'react';
 import { tv } from 'tailwind-variants';
 import { cn } from "@/utils/cn";
-import { ChevronsRightIcon } from "@/icons/chevrons-right";
-import {ChevronsDownIcon} from "@/icons/chevrons-down";
+import { ChevronsDownIcon } from "@/icons/chevrons-down";
 
 const selectVariants = tv({
     base: 'block w-full h-10 pl-4 pr-10 bg-white border border-davy-grey rounded-md text-grey placeholder-grey focus:outline-none appearance-none',

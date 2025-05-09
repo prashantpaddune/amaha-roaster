@@ -1,73 +1,59 @@
-// components/roaster/RoasterFilters.tsx
-
 'use client';
 
 import React from 'react';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { useRouter } from 'next/navigation';
+import { useAppDispatch } from '@/store/hooks';
 import {
     setService,
     setType,
     setCentre,
-    setSearch, resetFilters,
 } from '@/store/slices/filter-slice';
-import { fetchProviders } from '@/store/slices/provider-slice';
-import { FILTER_OPTIONS } from '@/components/constants';
-import { serializeFilters } from '@/utils/filters';
-import {Select} from "@/ui/select";
-import {Button} from "@/ui/button";
-import {Input} from "@/ui/input";
-import {SearchIcon} from "@/icons/search";
+import { CENTER_OPTIONS, SERVICE_OPTIONS, TYPE_OPTIONS } from '@/components/constants';
+import { Select } from "@/ui/select";
+import { Button } from "@/ui/button";
+import { Input } from "@/ui/input";
+import { SearchIcon } from "@/icons/search";
+import { FilterType } from "@/components/types";
 
-const RoasterFilters = () => {
+type Props = {
+    onSearchChange: (value: string) => void;
+    onReset: () => void;
+    applyFilters: () => void;
+    filters: FilterType;
+    showResetBtn: boolean;
+}
+
+const RoasterFilters = ({ filters, onSearchChange, applyFilters, onReset, showResetBtn }: Props) => {
     const dispatch = useAppDispatch();
-    const filters = useAppSelector((s) => s.filters);
-    const router = useRouter();
     const { service, type, centre, search } = filters;
-
-    const applyFilters = () => {
-        const newFilters = serializeFilters(filters);
-        router.replace(newFilters ? `?${newFilters}` : window.location.pathname);
-        dispatch(fetchProviders(filters));
-    };
+    const isApplyBtnDisabled = Boolean(service || type || centre);
 
     return (
-        <aside className="w-[22.5rem] pt-6 px-6 space-y-4 border-r border-gray-200">
+        <aside className="md:w-[22.5rem] w-full pt-6 px-6 space-y-4 border-r border-gray-200 md:min-h-screen">
             <Select
                 value={service}
                 onChange={(e) => dispatch(setService(e.target.value))}
-                options={[
-                    { label: 'All services', value: '' },
-                    ...FILTER_OPTIONS.services.map((s) => ({ label: s, value: s })),
-                ]}
+                options={SERVICE_OPTIONS}
             />
 
             <Select
                 value={type}
                 onChange={(e) => dispatch(setType(e.target.value))}
-                options={[
-                    { label: 'All types', value: '' },
-                    ...FILTER_OPTIONS.types.map((t) => ({
-                        label: t === 'inhouse' ? 'In-house' : 'External',
-                        value: t,
-                    })),
-                ]}
+                options={TYPE_OPTIONS}
             />
 
             <Select
                 value={centre}
                 onChange={(e) => dispatch(setCentre(e.target.value))}
-                options={[
-                    { label: 'All centres', value: '' },
-                    ...FILTER_OPTIONS.centres.map((c) => ({ label: c, value: c })),
-                ]}
+                options={CENTER_OPTIONS}
             />
 
             <div className="flex items-center space-x-4">
-                <Button onClick={() => resetFilters()} variant="secondary" size="md">
-                    Reset
-                </Button>
-                <Button onClick={applyFilters} variant="primary" size="md">
+                {showResetBtn && (
+                    <Button onClick={onReset} variant="secondary" size="md">
+                        Reset
+                    </Button>
+                )}
+                <Button disabled={!isApplyBtnDisabled} onClick={applyFilters} variant="primary" size="md">
                     Apply
                 </Button>
             </div>
@@ -79,14 +65,9 @@ const RoasterFilters = () => {
                 type="text"
                 value={search}
                 placeholder="Search provider"
-                onChange={(e) => {
-                    dispatch(setSearch(e.target.value))
-                    dispatch(fetchProviders(filters));
-                }}
+                onChange={(e) => onSearchChange(e.target.value)}
             />
-
-
-            <p className="text-sm text-grey">
+            <p className="text-sm">
                 You can search up to 5 providers to view their availability specifically.
             </p>
         </aside>

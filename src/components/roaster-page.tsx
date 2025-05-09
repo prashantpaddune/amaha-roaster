@@ -1,38 +1,39 @@
 'use client';
 
-import { useEffect } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { useAppDispatch, useAppSelector } from '@/store/hooks';
-import { setProviders } from '@/store/slices/provider-slice';
 import Filters from './roaster-filters';
 import { Provider } from '@/components/types';
-import { applyUrlFilters } from "@/utils/filters";
 import RoasterListView from "@/components/roaster-list-view";
 import RoasterCalenderView from "@/components/roaster-calender-view";
+import useGetProvidersFilters from "@/hooks/use-get-providers-filters";
+import { useAppSelector } from "@/store/hooks";
 
 type Props = {
     initialProviders: Provider[];
 }
 
 export default function RoasterPage({ initialProviders }: Props) {
-    const dispatch = useAppDispatch();
     const view = useAppSelector((s) => s.view.view);
-    const searchParams = useSearchParams();
-
-    useEffect(() => {
-        dispatch(setProviders(initialProviders));
-        applyUrlFilters(searchParams, dispatch);
-    }, [dispatch, initialProviders, searchParams]);
+    const {
+        onSearchChange,
+        onReset,
+        applyFilters,
+        filters,
+        showResetBtn
+    } = useGetProvidersFilters({ initialProviders });
 
     return (
-        <div className="flex h-max">
-            <div className="w-full">
-                <Filters />
-            </div>
-            <div className="p-4">
-                {view === 'list' && <RoasterListView />}
-                {view === 'calendar' && <RoasterCalenderView />}
-            </div>
+        <div className="flex flex-col md:flex-row h-full">
+            <Filters
+                filters={filters}
+                applyFilters={applyFilters}
+                onSearchChange={onSearchChange}
+                onReset={onReset}
+                showResetBtn={showResetBtn}
+            />
+            <main className="flex-1 p-4">
+                {view === 'list' && <RoasterListView/>}
+                {view === 'calendar' && <RoasterCalenderView/>}
+            </main>
         </div>
     );
 }
