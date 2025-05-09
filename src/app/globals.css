@@ -1,26 +1,109 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    /* Core palette */
+    --color-background:               var(--background);
+    --color-black:                    var(--black);
+    --color-grey:                     var(--grey);
+    --color-white:                    var(--white);
+    --color-foreground:               var(--foreground);
+
+    /* Navbar */
+    --color-navbar-ring:              var(--navbar-ring);
+    --color-navbar-border:            var(--navbar-border);
+    --color-navbar-accent-foreground: var(--navbar-accent-foreground);
+    --color-navbar-accent:            var(--navbar-accent);
+    --color-navbar-primary-foreground:var(--navbar-primary-foreground);
+    --color-navbar-primary:           var(--navbar-primary);
+    --color-navbar-foreground:        var(--navbar-foreground);
+    --color-navbar:                   var(--navbar);
+
+    /* Forms & rings */
+    --color-ring:                     var(--ring);
+    --color-input:                    var(--input);
+    --color-border:                   var(--border);
+
+    /* Intent colours */
+    --color-destructive:              var(--destructive);
+    --color-accent-foreground:        var(--accent-foreground);
+    --color-accent:                   var(--accent);
+    --color-muted-foreground:         var(--muted-foreground);
+    --color-muted:                    var(--muted);
+    --color-secondary-foreground:     var(--secondary-foreground);
+    --color-secondary:                var(--secondary);
+    --color-primary-foreground:       var(--primary-foreground);
+    --color-primary:                  var(--primary);
+
+    /* ─────────── Slot states ─────────── */
+    --color-slot-online:              var(--slot-online);
+    --color-slot-offline:             var(--slot-offline);
+    --color-slot-both:                var(--slot-both);
+    --color-slot-available:           var(--slot-available);
+    --color-slot-booked-online:       var(--slot-booked-online);
+    --color-slot-booked-offline:      var(--slot-booked-offline);
+    --color-slot-blocked:             var(--slot-blocked);
+
+    /* ─────────── Calendar events ─────────── */
+    --color-event-purple:             var(--event-purple);
+    --color-event-green:              var(--event-green);
+    --color-event-gold:               var(--event-gold);
+    --color-event-blue:               var(--event-blue);
+    --color-event-brown:              var(--event-brown);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+    /* ─────────── Core variables ─────────── */
+    --radius:            0.625rem;
+    --background:        #131315;
+    --black:             #000000;
+    --grey:              #4C4C4C;
+    --white:             #FFFFFF;
+    --foreground:        #FBFBFB;
+    --primary:           #EBEBEB;
+    --primary-foreground:#343434;
+    --secondary:         #454545;
+    --secondary-foreground:#FBFBFB;
+    --muted:             #60646C;
+    --muted-foreground:  #A1A1AA;
+    --accent:            #8FBBE8;
+    --accent-foreground: #FBFBFB;
+    --destructive:       #DC2626;
+    --border:            #3F3F46;
+    --input:             #505057;
+    --ring:              #1f1f21;
+
+    /* Navbar */
+    --navbar:            #343434;
+    --navbar-foreground: #FBFBFB;
+    --navbar-primary:    #7C4DFF;
+    --navbar-primary-foreground:#FBFBFB;
+    --navbar-accent:     #454545;
+    --navbar-accent-foreground:#FBFBFB;
+    --navbar-border:     #28282C;
+    --navbar-ring:       #8E8E8E;
+
+    /* ─────────── Slot state bases ─────────── */
+    --slot-online:           #A3E635;
+    --slot-offline:          #F97316;
+    --slot-both:             #60A5FA;
+    --slot-available:        #E5E7EB;
+    --slot-booked-online:    #1E40AF;
+    --slot-booked-offline:   #92400E;
+    --slot-blocked:          #EF4444;
+
+    /* ─────────── Event bases ─────────── */
+    --event-purple:          #9333EA;
+    --event-green:           #16A34A;
+    --event-gold:            #CA8A04;
+    --event-blue:            #2563EB;
+    --event-brown:           #A16207;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-white text-grey;
+    }
 }
