@@ -1,7 +1,3 @@
-export default function Home() {
-  return (
-      <div className="flex flex-col items-center justify-center w-full">
-          <h1>Provider Calendar</h1>
-      </div>
-  );
-}
+import RoasterPage from "@/components/roaster-page";
+
+export default RoasterPage;

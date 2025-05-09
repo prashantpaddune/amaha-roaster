@@ -46,6 +46,7 @@
     /* ─────────── Calendar events ─────────── */
     --color-event-purple:             var(--event-purple);
     --color-event-green:              var(--event-green);
+    --color-event-moss-green:         var(--event-moss-green);
     --color-event-gold:               var(--event-gold);
     --color-event-blue:               var(--event-blue);
     --color-event-brown:              var(--event-brown);
@@ -79,7 +80,7 @@
     --navbar-primary-foreground:#FBFBFB;
     --navbar-accent:     #454545;
     --navbar-accent-foreground:#FBFBFB;
-    --navbar-border:     #28282C;
+    --navbar-border:     #E0E0E0;
     --navbar-ring:       #8E8E8E;
 
     /* ─────────── Slot state bases ─────────── */
@@ -93,7 +94,8 @@
 
     /* ─────────── Event bases ─────────── */
     --event-purple:          #9333EA;
-    --event-green:           #16A34A;
+    --event-green:           #4E6137;
+    --event-moss-green:      #DBE7CC;
     --event-gold:            #CA8A04;
     --event-blue:            #2563EB;
     --event-brown:           #A16207;
