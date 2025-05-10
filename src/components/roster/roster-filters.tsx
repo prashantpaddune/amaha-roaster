@@ -28,7 +28,7 @@ const RosterFilters = ({ filters, onSearchChange, applyFilters, onReset, showRes
     const isApplyBtnDisabled = Boolean(service || type || centre);
 
     return (
-        <aside className="md:w-[22.5rem] w-full pt-6 px-6 space-y-4 border-r border-gray-200 md:min-h-screen">
+        <aside className="flex-shrink-0 md:w-[22.5rem] w-full pt-6 px-6 space-y-4 border-r border-gray-200 md:min-h-screen">
             <Select
                 value={service}
                 onChange={(e) => dispatch(setService(e.target.value))}

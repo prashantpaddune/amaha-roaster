@@ -15,7 +15,7 @@ const RosterChips = ({ date }: Props) => {
                     {format(date, "EEE, d MMM yyyy")}
                 </h3>
                 <p className="text-sm font-normal text-muted-foreground">
-                    Showing slots in the 6 am to 12 am window.
+                    Showing slots in the 8 am to 12 am window.
                 </p>
             </div>
 

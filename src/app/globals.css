@@ -5,6 +5,7 @@
     --color-background:               var(--background);
     --color-black:                    var(--black);
     --color-grey:                     var(--grey);
+    --color-davy-green:               var(--davy-green);
     --color-davy-grey:                var(--davy-grey);
     --color-white:                    var(--white);
     --color-foreground:               var(--foreground);
@@ -35,7 +36,7 @@
     --color-primary-foreground:       var(--primary-foreground);
     --color-primary:                  var(--primary);
 
-    /* ─────────── Slot states ─────────── */
+    /* ─────────── RosterSlot states ─────────── */
     --color-slot-online:              var(--slot-online);
     --color-slot-offline:             var(--slot-offline);
     --color-slot-both:                var(--slot-both);
@@ -54,7 +55,7 @@
 
     /* ─────────── Calendar events ─────────── */
     --color-button-primary:           var(--button-primary);
---color-button-secondary:             var(--button-secondary);
+    --color-button-secondary:         var(--button-secondary);
 }
 
 :root {
@@ -63,6 +64,7 @@
     --background:        #131315;
     --black:             #000000;
     --grey:              #4C4C4C;
+    --davy-green:        #607447;
     --davy-grey:         #9E9E9E;
     --white:             #FFFFFF;
     --foreground:        #FBFBFB;
@@ -89,11 +91,11 @@
     --navbar-border:     #E0E0E0;
     --navbar-ring:       #8E8E8E;
 
-    /* ─────────── Slot state bases ─────────── */
+    /* ─────────── RosterSlot state bases ─────────── */
     --slot-online:           #97CC55;
     --slot-offline:          #E76943;
     --slot-both:             #5AA9E8;
-    --slot-available:        #E5E7EB;
+    --slot-available:        #EEEEEE;
     --slot-booked-online:    #355E80;
     --slot-booked-offline:   #80490B;
     --slot-blocked:          #C73031;
@@ -131,4 +133,12 @@
     h4 { font-size: 15px; font-weight: 500; }
     h5 { font-size: 14px; font-weight: 500; }
     h6 { font-size: 12px; font-weight: 500; }
+
+    .scrollbar-hide {
+        -ms-overflow-style: none;   /* IE & Edge */
+        scrollbar-width: none;      /* Firefox */
+    }
+    .scrollbar-hide::-webkit-scrollbar {
+        display: none;              /* Chrome, Safari, Opera */
+    }
 }

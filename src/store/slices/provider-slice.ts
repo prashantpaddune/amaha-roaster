@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk, PayloadAction } from '@reduxjs/toolkit';
 import { Provider } from '@/components/roster/types';
 
-interface ProviderState {
+export interface ProviderState {
     list: Provider[];
     loading: boolean;
     error: string | null;
