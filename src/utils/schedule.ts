@@ -1,4 +1,4 @@
-import { Availability } from "@/components/roster/types";
+import {Availability, Provider} from "@/components/roster/types";
 import { SlotStatus } from "@/components/roster/roster-list-view/types";
 
 export const getStatusForSlot = (
@@ -29,4 +29,18 @@ export const chunkIntoColumns = <T>(arr: T[], size = 4): T[][] => {
         cols.push(arr.slice(i, i + size));
     }
     return cols;
+}
+
+export const getHomeScheduleCount = (provider: Provider) => {
+    return provider.availabilities.reduce(
+        (sum, av) => sum + av.offline_slots.length + av.both_slots.length,
+        0
+    )
+}
+
+export const getVideoScheduleCount = (provider: Provider) => {
+    return provider.availabilities.reduce(
+        (sum, av) => sum + av.online_slots.length + av.both_slots.length,
+        0
+    )
 }
