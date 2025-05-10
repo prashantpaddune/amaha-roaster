@@ -40,7 +40,7 @@ export const DateSelector: React.FC<DateSelectorProps> = ({
     const canGoPrev = weekStart > today;
 
     return (
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 md:space-x-4 overflow-x-auto scrollbar-hide px-2 md:px-0">
             <NavButton
                 onClick={() => changeWeek(-7)}
                 disabled={!canGoPrev}
@@ -83,11 +83,12 @@ const NavButton: React.FC<NavProps> = ({ onClick, disabled, Icon }) => (
         onClick={onClick}
         disabled={disabled}
         className={cn(
-            "p-1.5 border border-navbar-border rounded-full",
+            "flex-shrink-0 p-1 md:p-1.5 border rounded-full",
+            "border-navbar-border",
             disabled && "opacity-50 cursor-not-allowed"
         )}
     >
-        <Icon className="h-6 w-6 text-davy-green" />
+        <Icon className="h-5 w-5 md:h-6 md:w-6 text-davy-green"/>
     </button>
 );
 
