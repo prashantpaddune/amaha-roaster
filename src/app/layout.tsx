@@ -20,13 +20,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-        <body className={`${inter.variable}`}>
+      <html lang="en">
+        <body className={`${inter.variable} flex flex-col h-screen overflow-hidden`}>
             <Providers>
-                <Header />
-                {children}
+                <Header/>
+                <div className="flex flex-1 overflow-hidden">
+                    {children}
+                </div>
             </Providers>
         </body>
-    </html>
+      </html>
   );
 }

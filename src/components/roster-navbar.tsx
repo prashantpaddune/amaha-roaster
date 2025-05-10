@@ -11,7 +11,7 @@ const RosterNavbar = () => {
     const dispatch = useAppDispatch();
 
     return (
-        <header className="w-full px-6 py-3.5 flex items-center justify-between border-b border-navbar-border">
+        <header className="w-full px-6 py-3.5 flex items-center justify-between border-b border-navbar-border md:sticky md:top-0 md:z-20 md:bg-white">
             <div className="flex items-center space-x-6">
                 <ChevronsRightIcon className="h-6 w-6 text-grey" />
                 <h1>Provider Calendar</h1>

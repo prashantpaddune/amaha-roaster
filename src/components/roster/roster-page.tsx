@@ -22,7 +22,7 @@ export default function RosterPage({ initialProviders }: Props) {
     } = useGetProvidersFilters({ initialProviders });
 
     return (
-        <div className="flex flex-col md:flex-row h-screen">
+        <div className="flex flex-col md:flex-row flex-1 overflow-scroll md:overflow-hidden">
             <Filters
                 filters={filters}
                 applyFilters={applyFilters}
@@ -30,7 +30,7 @@ export default function RosterPage({ initialProviders }: Props) {
                 onReset={onReset}
                 showResetBtn={showResetBtn}
             />
-            <main className="flex-1 min-w-0 p-4 overflow-scroll scrollbar-hide">
+            <main className="flex-1 min-w-0 p-4 md:overflow-y-auto">
                 {view === 'list' && <RosterListView/>}
                 {view === 'calendar' && <RosterCalenderView/>}
             </main>
