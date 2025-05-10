@@ -87,7 +87,7 @@ const NavButton: React.FC<NavProps> = ({ onClick, disabled, Icon }) => (
             disabled && "opacity-50 cursor-not-allowed"
         )}
     >
-        <Icon className="h-6 w-6 text-gray-600" />
+        <Icon className="h-6 w-6 text-davy-green" />
     </button>
 );
 

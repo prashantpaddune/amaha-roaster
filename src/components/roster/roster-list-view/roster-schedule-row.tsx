@@ -28,7 +28,7 @@ export const RosterScheduleRow = ({
                         onClick={() => scrollBy(-200)}
                         className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2.5 bg-white rounded-l-xl border-r border-gray-200 h-full cursor-pointer"
                     >
-                        <ChevronLeftIcon className="h-5 w-5 text-gray-500"/>
+                        <ChevronLeftIcon className="h-6 w-6 text-muted-foreground"/>
                     </button>
 
                     <div
@@ -53,7 +53,7 @@ export const RosterScheduleRow = ({
                         onClick={() => scrollBy(200)}
                         className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2.5 bg-white rounded-r-xl border-l border-gray-200 h-full cursor-pointer"
                     >
-                        <ChevronRightIcon className="h-5 w-5 text-gray-500"/>
+                        <ChevronRightIcon className="h-6 w-6 text-muted-foreground"/>
                     </button>
                 </div>
             </div>

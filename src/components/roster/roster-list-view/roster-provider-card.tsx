@@ -52,9 +52,9 @@ const ProviderCard = ({
                 </div>
             </div>
 
-            <Link className="inline-flex items-center text-sm font-medium text-orange-600 hover:text-orange-700" href={calendarHref}>
+            <Link className="inline-flex items-center text-sm font-semibold text-slot-offline underline underline-offset-2" href={calendarHref}>
                 View Calendar
-                <ChevronRightIcon className="h-4 w-4 ml-1" />
+                <ChevronRightIcon className="h-6 w-6 ml-1 text-slot-offline" />
             </Link>
         </div>
     );
