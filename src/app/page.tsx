@@ -1,5 +1,5 @@
 import RosterPage from '@/components/roster/roster-page';
-import { getProviders } from '@/utils/providers';
+import { getProviders } from '@/components/roster/get-providers';
 import type { FilterType, Provider } from '@/components/roster/types';
 
 type Props = {
