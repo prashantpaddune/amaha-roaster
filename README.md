@@ -54,6 +54,9 @@ Amaha Roster is a comprehensive application designed to efficiently manage and d
 <img width="1469" alt="image" src="https://github.com/user-attachments/assets/7447b3cb-bac0-4323-8b98-6350f7f72206" />
 <img width="1467" alt="image" src="https://github.com/user-attachments/assets/afd1d59a-a760-414e-9745-455bdc0b6736" />
 <img width="1467" alt="image" src="https://github.com/user-attachments/assets/b09ced04-47f3-4ab7-b31a-8ae2e65eccdc" />
+<img width="1465" alt="image" src="https://github.com/user-attachments/assets/d7124b03-6903-4dcd-9e4f-3400fdd6f942" />
+<img width="1464" alt="image" src="https://github.com/user-attachments/assets/c52d5dbd-c08a-435b-a55c-c3640d5c7703" />
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/67902266-ecc7-470b-bcba-3235d9847436" />
 
 
 
