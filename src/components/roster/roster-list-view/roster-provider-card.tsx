@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { ChevronRightIcon } from '@/icons/chevron-right';
 import { ClinicIcon } from "@/icons/clinic";
 import { VideoIcon } from "@/icons/video";
+import { cn } from "@/utils/cn";
 
 export type ProviderCardProps = {
     id: string | number;
@@ -13,7 +14,7 @@ export type ProviderCardProps = {
     avatarUrl: string;
     homeCount: number;
     videoCount: number;
-    calendarHref: string;
+    calendarHref?: string;
     className?: string;
 }
 
@@ -24,9 +25,10 @@ const ProviderCard = ({
    homeCount,
    videoCount,
    calendarHref,
+   className,
 }: ProviderCardProps) => {
     return (
-        <div key={id}>
+        <div key={id} className={cn(className)}>
             <div className="relative w-16 h-16 rounded-full overflow-hidden mb-3">
                 <Image
                     src={avatarUrl}
@@ -52,10 +54,12 @@ const ProviderCard = ({
                 </div>
             </div>
 
-            <Link className="inline-flex items-center text-sm font-semibold text-slot-offline underline underline-offset-2" href={calendarHref}>
-                View Calendar
-                <ChevronRightIcon className="h-6 w-6 ml-1 text-slot-offline" />
-            </Link>
+            {calendarHref && (
+                <Link className="inline-flex items-center text-sm font-semibold text-slot-offline underline underline-offset-2" href={calendarHref}>
+                    View Calendar
+                    <ChevronRightIcon className="h-6 w-6 ml-1 text-slot-offline" />
+                </Link>
+            )}
         </div>
     );
 };
