@@ -1,8 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Amaha Roster Management Application
 
-## Getting Started
+Amaha Roster is a comprehensive application designed to efficiently manage and display roster data dynamically. It provides seamless schedule management with intuitive filters, detailed views, and calendar functionalities.
 
-First, run the development server:
+## Table of Contents
+
+- [Features](#features)
+- [Screenshots](#screenshots)
+- [Tech Stack](#tech-stack)
+- [Setup Instructions](#setup-instructions)
+- [Running Tests](#running-tests)
+- [Deployment](#deployment)
+- [Additional Implemented Features](#additional-implemented-features)
+- [Mock Data](#mock-data)
+
+---
+
+## Features
+
+### Core Functionality:
+
+- **Roster Management:** Dynamic viewing and management of provider schedules.
+- **Filters & Search:** Ability to filter providers by:
+    - Services (Therapist, Psychiatrist, Cardiologist, etc.)
+    - Types (In-house, External)
+    - Centers (Bandra Clinic, Andheri Clinic, etc.)
+- **Search Providers:** Quickly search specific providers by name.
+- **Detailed Calendar View:** View detailed provider schedules with clearly color-coded statuses:
+    - 🟢 Online
+    - 🟠 Offline
+    - 🔵 Online + Offline
+    - 🟤 Blocked
+    - ⚪ Available Slots
+
+### UI/UX & Design:
+
+- Pixel-perfect responsive design following provided Figma references.
+- Time-slot-based schedule viewing for clear and intuitive interactions.
+- Clean, modern interface developed with React.js, Tailwind CSS, and Redux Toolkit.
+
+---
+
+## Additional Implemented Features
+
+- **List and Calender View with Filters:** Users can switch between list and calender views for better scheduling context with filters.
+- **Day & Week Calendar Views:** Users can switch between daily and weekly views for better scheduling context.
+- **Redux Toolkit Integration:** Efficient state management for filters, views, and provider data.
+
+---
+
+## Screenshots
+
+**Roster List View**  
+![Roster List View](/mnt/data/a1e5b15c-1d59-4daa-8335-20213be1ec67.png)
+
+**Provider Detailed Calendar View**  
+![Provider Calendar View](/mnt/data/f1bb8a9e-d013-453c-9663-1c03d099657e.png)
+
+**Filters & Search Implementation**  
+![Filters and Search](/mnt/data/c9f7045c-c3e9-43d0-af88-875dae60a4f0.png)
+
+---
+
+## Tech Stack
+
+### Frontend:
+- **Framework:** React.js, Next.js
+- **Styling:** Tailwind CSS
+- **State Management:** Redux Toolkit
+- **API Handling:** fetch
+- **Date Management:** Date-fns
+
+### Testing:
+- Vitest & React Testing Library for unit tests
+
+---
+
+## Setup Instructions
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/prashantpaddune/amaha-roaster
+cd amaha-roaster
+```
+
+### Install Dependencies
+
+```bash
+npm install
+# or using yarn
+yarn
+# or using pnpm
+pnpm install
+```
+
+### Running Locally
 
 ```bash
 npm run dev
@@ -10,27 +102,36 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Access the app at [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Running Tests
 
-## Learn More
+Run unit and integration tests using Jest:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test
+# or
+yarn test
+# or
+pnpm test
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Deployed using Vercel/Netlify/Firebase Hosting:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```bash
+pnpm run build
+pnpm start
+```
+
+Live link: [Amaha Roster App](https://amaha-roaster.vercel.app/)
+
+---
