@@ -3,14 +3,11 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
     images: {
         remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'randomuser.me',
-                port: '',
-                pathname: '/api/portraits/**',
-            },
+            new URL('https://randomuser.me/api/portraits/women/**'),
+            new URL('https://randomuser.me/api/portraits/men/**')
         ],
     },
+  /* config options here */
 };
 
 export default nextConfig;
