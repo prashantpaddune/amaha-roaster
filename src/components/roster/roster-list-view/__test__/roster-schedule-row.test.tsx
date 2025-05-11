@@ -8,7 +8,7 @@ vi.mock('@/utils/schedule', () => {
     const mockCols = [['08:00', '09:00'], ['10:00']];
     return {
         chunkIntoColumns: () => mockCols,
-        getStatusForSlot: (_availability: any, time: string) =>
+        getStatusForSlot: (_availability: Availability, time: string) =>
             time === '08:00' ? 'online' : 'offline',
     };
 });

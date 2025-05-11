@@ -5,24 +5,8 @@ import {ProviderState} from "@/store/slices/provider-slice";
 import RosterProviderSchedule from "@/components/roster/roster-list-view/roster-provider-schedule";
 
 vi.mock('@/utils/schedule', () => ({
-    getHomeScheduleCount: (provider: any) => 5,
-    getVideoScheduleCount: (provider: any) => 2,
-}));
-
-vi.mock('@/components/roster/roster-list-view/roster-provider-card', () => ({
-    __esModule: true,
-    default: (props: any) => (
-        <div data-testid="provider-card">
-            {props.name} | home:{props.homeCount} | video:{props.videoCount}
-        </div>
-    ),
-}));
-
-vi.mock('./roster-schedule-row', () => ({
-    __esModule: true,
-    RosterScheduleRow: (props: any) => (
-        <div data-testid="schedule-row">{props.availability.online_slots.join(',')}</div>
-    ),
+    getHomeScheduleCount: () => 5,
+    getVideoScheduleCount: () => 2,
 }));
 
 describe('RosterProviderSchedule', () => {

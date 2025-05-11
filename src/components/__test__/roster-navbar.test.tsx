@@ -8,7 +8,7 @@ import { VIEW_OPTIONS } from "@/components/roster/constants";
 const dispatchMock = vi.fn();
 
 vi.mock('@/store/hooks', () => ({
-    useAppSelector: (fn: any) => fn({ view: { view: 'weekly' } }),
+    useAppSelector: (fn: (arg0: { view: { view: string; }; }) => never) => fn({ view: { view: 'weekly' } }),
     useAppDispatch: () => dispatchMock,
 }));
 

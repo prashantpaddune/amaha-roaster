@@ -3,10 +3,11 @@ import { render, screen, cleanup } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { COLORS } from '../constants';
 import RosterSlot from "@/components/roster/roster-list-view/roster-slot";
+import { SlotStatus } from "@/components/roster/roster-list-view/types";
 
 describe('RosterSlot', () => {
     it('renders the time text', () => {
-        render(<RosterSlot time="08:30" status={Object.keys(COLORS)[0] as any} />);
+        render(<RosterSlot time="08:30" status={Object.keys(COLORS)[0] as SlotStatus} />);
         expect(screen.getByText('08:30')).toBeInTheDocument();
     });
 
@@ -15,7 +16,7 @@ describe('RosterSlot', () => {
     statuses.forEach((status) => {
         it(`applies the correct color class for status ${status}`, () => {
             const time = '09:00';
-            render(<RosterSlot time={time} status={status as any} />);
+            render(<RosterSlot time={time} status={status as SlotStatus} />);
             const slot = screen.getByText(time);
             ['min-w-[4rem]', 'text-center', 'py-1.5', 'rounded-lg', 'font-medium', 'text-xs'].forEach((cls) => {
                 expect(slot).toHaveClass(cls);
@@ -28,7 +29,7 @@ describe('RosterSlot', () => {
     it('combines base and color classes in the className attribute', () => {
         const status = statuses[1];
         const time = '10:15';
-        render(<RosterSlot time={time} status={status as any} />);
+        render(<RosterSlot time={time} status={status as SlotStatus} />);
         const slot = screen.getByText(time);
         const expectedClasses = [
             'min-w-[4rem]',
