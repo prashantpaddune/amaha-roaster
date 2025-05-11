@@ -35,7 +35,7 @@ const RosterProviderSchedule = ({ list, error, loading }: ProviderState) => {
                                 avatarUrl={provider.image}
                                 homeCount={homeCount}
                                 videoCount={videoCount}
-                                calendarHref={`/providers/${provider.id}`}
+                                calendarHref={`/provider/${provider.id}`}
                             />
                         </div>
 
