@@ -1,18 +1,15 @@
-import { NextResponse } from 'next/server'
+import {NextRequest, NextResponse} from 'next/server'
 import { PROVIDERS_DATA } from '@/data/providers'
 
 export async function GET(
-    _req: Request,
-    { params }: { params: { id: string } }
+    req: NextRequest,
+    { params }: { params: Promise<{ id: string }> }
 ) {
-    const id = Number(params.id)
-    const provider = PROVIDERS_DATA.find((p) => p.id === id)
+    const { id } = await params
+    const provider = PROVIDERS_DATA.find((p) => p.id === Number(id))
 
     if (!provider) {
-        return NextResponse.json(
-            { error: `No provider found with id ${id}` },
-            { status: 404 }
-        )
+        return NextResponse.json({ error: `Provider ${id} not found` }, { status: 404 })
     }
 
     return NextResponse.json(provider)
