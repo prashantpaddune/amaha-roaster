@@ -1,5 +1,5 @@
 import {addDays} from "date-fns";
-import { CALENDER_END_HOUR, CALENDER_START_HOUR } from "@/ui/calender/constants";
+import { CALENDER_END_HOUR, CALENDER_START_HOUR } from "@/components/roster/roster-calender-view/calender/constants";
 
 export const getHours = Array.from(
     { length: CALENDER_END_HOUR - CALENDER_START_HOUR },

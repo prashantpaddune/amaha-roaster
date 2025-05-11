@@ -2,7 +2,7 @@
 
 import { Provider } from "@/components/roster/types";
 import { useRosterCalendar } from "@/components/roster/roster-calender-view/use-roaster-calender";
-import { Calender } from "@/ui/calender/calender";
+import { Calender } from "@/components/roster/roster-calender-view/calender/calender";
 import React from "react";
 import ProviderCard from "@/components/roster/roster-list-view/roster-provider-card";
 import { getHomeScheduleCount, getVideoScheduleCount } from "@/utils/schedule";

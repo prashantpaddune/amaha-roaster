@@ -1,6 +1,6 @@
 import { Availability, Provider } from "@/components/roster/types";
 import { SlotStatus } from "@/components/roster/roster-list-view/types";
-import { CalEvent } from "@/ui/calender/types";
+import { CalEvent } from "@/components/roster/roster-calender-view/calender/types";
 import { addDays, startOfWeek } from "date-fns";
 import { set as setDateTime } from "date-fns/set";
 

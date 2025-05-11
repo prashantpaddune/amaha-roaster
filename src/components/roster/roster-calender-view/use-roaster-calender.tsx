@@ -7,7 +7,7 @@ import {
     addDays,
 } from "date-fns";
 import type { Provider } from "@/components/roster/types";
-import { ViewType } from "@/ui/calender/types";
+import { ViewType } from "@/components/roster/roster-calender-view/calender/types";
 import { COLORS } from "@/components/roster/roster-list-view/constants";
 import { mapAvailabilitiesToEvents } from "@/utils/schedule";
 

@@ -2,7 +2,7 @@
 
 import React from "react";
 import { useAppSelector } from "@/store/hooks";
-import { Calender } from "@/ui/calender/calender";
+import { Calender } from "@/components/roster/roster-calender-view/calender/calender";
 import { useRosterCalendar } from "@/components/roster/roster-calender-view/use-roaster-calender";
 
 const RosterCalendarView = () => {
