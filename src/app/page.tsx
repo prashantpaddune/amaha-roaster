@@ -2,8 +2,12 @@ import RosterPage from '@/components/roster/roster-page';
 import { getProviders } from '@/utils/providers';
 import type { FilterType, Provider } from '@/components/roster/types';
 
-const Page = async ({ searchParams }: { searchParams: FilterType}) => {
-    const initialProviders: Provider[] = await getProviders(searchParams);
+type Props = {
+    readonly searchParams: Promise<FilterType>
+}
+
+const Page = async ({ searchParams }: Props) => {
+    const initialProviders: Provider[] = await getProviders(await searchParams);
     return <RosterPage initialProviders={initialProviders} />;
 };
 
