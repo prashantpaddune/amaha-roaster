@@ -1,3 +1,4 @@
+import {isToday} from "date-fns";
 
 export const getTimeSlots: string[] = Array.from(
     { length: (24 - 8) * 4 + 1 },
@@ -8,3 +9,7 @@ export const getTimeSlots: string[] = Array.from(
         return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
     }
 );
+
+export const isPresentDay = (d: Date) => {
+    return isToday(d)
+}

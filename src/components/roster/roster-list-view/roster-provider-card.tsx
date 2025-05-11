@@ -47,7 +47,7 @@ const ProviderCard = ({
                     <span className="text-xs font-medium text-grey">{homeCount}</span>
                 </div>
                 <div className="flex items-center space-x-1 bg-[#F7F7F7] rounded-lg px-1.5 py-1">
-                    <VideoIcon className="h-4 w-4" />
+                    <VideoIcon className="h-4 w-4 text-grey" />
                     <span className="text-xs font-medium text-grey">{videoCount}</span>
                 </div>
             </div>

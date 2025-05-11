@@ -3,9 +3,9 @@
 import Filters from './roster-filters';
 import { Provider } from '@/components/roster/types';
 import RosterListView from "@/components/roster/roster-list-view/roster-list-view";
-import RosterCalenderView from "@/components/roster/roster-calender-view";
-import useGetProvidersFilters from "@/hooks/use-get-providers-filters";
+import useGetProvidersFilters from "@/components/roster/use-get-providers-filters";
 import { useAppSelector } from "@/store/hooks";
+import RosterCalenderView from "@/components/roster/roster-calender-view/roster-calender-view";
 
 type Props = {
     initialProviders: Provider[];
@@ -32,7 +32,7 @@ export default function RosterPage({ initialProviders }: Props) {
             />
             <main className="flex-1 min-w-0 p-4 md:overflow-y-auto">
                 {view === 'list' && <RosterListView/>}
-                {view === 'calendar' && <RosterCalenderView/>}
+                {view === 'calendar' && <RosterCalenderView />}
             </main>
         </div>
     );
