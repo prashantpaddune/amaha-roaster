@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
         remotePatterns: [
             new URL('https://randomuser.me/api/portraits/**'),
         ],
+        unoptimized: true,
     },
   /* config options here */
 };
