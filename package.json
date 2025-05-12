@@ -9,7 +9,9 @@
     "lint": "next lint",
     "test": "vitest",
     "test:ci": "vitest run",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "integration": "pnpm exec playwright test",
+    "integration:ui": "pnpm exec playwright test --ui"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.8.1",
@@ -25,14 +27,15 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@playwright/test": "^1.52.0",
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/jest-dom": "6.6.3",
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^14.6.1",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "@vitejs/plugin-react": "^4.4.1",
     "@vitest/coverage-v8": "^3.1.2",
     "@vitest/expect": "^3.1.2",
