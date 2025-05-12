@@ -28,10 +28,37 @@ test.describe('Amaha Roster Management', () => {
 
     test('opens calendar view for a provider', async ({ page }) => {
         await page.getByRole('link', { name: /view calendar/i }).first().click();
-
         await expect(page).toHaveURL(/\/provider\/\d+/);
-
         await expect(page.locator('[data-test-id="calendar-view"]')).toBeVisible();
     });
+
+    test('filter by provider type (in-house)', async ({ page }) => {
+        await page.selectOption('select[name="type"]', 'inhouse');
+        await page.getByRole('button', { name: "Apply" }).click();
+
+        const inhouseCount = PROVIDERS_DATA.filter(p => p.is_inhouse).length;
+        const cards = page.locator('[data-test-id="provider-card"]');
+        await expect(cards).toHaveCount(inhouseCount);
+    });
+
+    test('filter by centre', async ({ page }) => {
+        await page.selectOption('select[name="centre"]', 'Bandra Clinic');
+        await page.getByRole('button', { name: "Apply" }).click();
+
+        const centreCount = PROVIDERS_DATA.filter(
+            p => p.clinic_details.name === 'Bandra Clinic'
+        ).length;
+        const cards = page.locator('[data-test-id="provider-card"]');
+        await expect(cards).toHaveCount(centreCount);
+    });
+
+    test('shows empty state when no providers match', async ({ page }) => {
+        await page.selectOption('select[name="service"]', 'neurologist');
+        await page.fill('input[name="search"]', 'Nonexistent Name');
+        await page.getByRole('button', { name: "Apply" }).click();
+
+        await expect(page.getByText(/no providers found/i)).toBeVisible();
+    });
+
 
 });
