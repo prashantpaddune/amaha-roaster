@@ -49,15 +49,17 @@ Amaha Roster is a comprehensive application designed to efficiently manage and d
 ---
 
 ## Screenshots
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/0158e12d-d61b-4c72-a335-7102b0c55c73" />
+<img width="1464" alt="image" src="https://github.com/user-attachments/assets/edfffd42-163b-4070-a2fe-39983aa30d6a" />
+<img width="1469" alt="image" src="https://github.com/user-attachments/assets/7447b3cb-bac0-4323-8b98-6350f7f72206" />
+<img width="1467" alt="image" src="https://github.com/user-attachments/assets/afd1d59a-a760-414e-9745-455bdc0b6736" />
+<img width="1467" alt="image" src="https://github.com/user-attachments/assets/b09ced04-47f3-4ab7-b31a-8ae2e65eccdc" />
+<img width="1465" alt="image" src="https://github.com/user-attachments/assets/d7124b03-6903-4dcd-9e4f-3400fdd6f942" />
+<img width="1464" alt="image" src="https://github.com/user-attachments/assets/c52d5dbd-c08a-435b-a55c-c3640d5c7703" />
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/67902266-ecc7-470b-bcba-3235d9847436" />
 
-**Roster List View**  
-![Roster List View](/mnt/data/a1e5b15c-1d59-4daa-8335-20213be1ec67.png)
 
-**Provider Detailed Calendar View**  
-![Provider Calendar View](/mnt/data/f1bb8a9e-d013-453c-9663-1c03d099657e.png)
 
-**Filters & Search Implementation**  
-![Filters and Search](/mnt/data/c9f7045c-c3e9-43d0-af88-875dae60a4f0.png)
 
 ---
 
