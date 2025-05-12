@@ -30,7 +30,7 @@ export const Calender: React.FC<CalendarProps> = ({
       activeDate,
       slotHeight = 100,
 }) => (
-    <div className="bg-white rounded-xl">
+    <div data-test-id="calendar-view" className="bg-white rounded-xl">
         <div className="flex items-center justify-between mb-2 px-4 py-2">
             <div className="flex items-center space-x-2">
                 <button

@@ -28,7 +28,7 @@ const ProviderCard = ({
    className,
 }: ProviderCardProps) => {
     return (
-        <div key={id} className={cn(className)}>
+        <div data-test-id="provider-card" key={id} className={cn(className)}>
             <div className="relative w-16 h-16 rounded-full overflow-hidden mb-3">
                 <Image
                     src={avatarUrl}

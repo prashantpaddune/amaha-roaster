@@ -30,18 +30,21 @@ const RosterFilters = ({ filters, onSearchChange, applyFilters, onReset, showRes
     return (
         <aside className="flex-shrink-0 md:w-[22.5rem] w-full pt-6 px-6 space-y-4 border-r border-gray-200 md:min-h-screen">
             <Select
+                name="service"
                 value={service}
                 onChange={(e) => dispatch(setService(e.target.value))}
                 options={SERVICE_OPTIONS}
             />
 
             <Select
+                name="type"
                 value={type}
                 onChange={(e) => dispatch(setType(e.target.value))}
                 options={TYPE_OPTIONS}
             />
 
             <Select
+                name="centre"
                 value={centre}
                 onChange={(e) => dispatch(setCentre(e.target.value))}
                 options={CENTER_OPTIONS}
@@ -61,6 +64,7 @@ const RosterFilters = ({ filters, onSearchChange, applyFilters, onReset, showRes
             <hr className="border-t border-gray-200 my-4" />
 
             <Input
+                name="search"
                 icon={<SearchIcon className="h-6 w-6" />}
                 type="text"
                 value={search}
