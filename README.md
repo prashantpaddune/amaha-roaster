@@ -74,6 +74,7 @@ Amaha Roster is a comprehensive application designed to efficiently manage and d
 
 ### Testing:
 - Vitest & React Testing Library for unit tests
+- Playwright for e2e Integration testing
 
 ---
 
